@@ -20,7 +20,7 @@ export class Proxy extends EventProducer<ProxyEventMap> {
         });
         this.ws.addEventListener("message", e => {
             //console.log("Hello");
-            console.log(e.data); //
+            console.log(e.data); 
             let p = <IncomingPacket>JSON.parse(e.data);
             switch (p.type) {
                 case "error":
